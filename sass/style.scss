@@ -1,0 +1,329 @@
+/* The new public styles */
+
+/* Colors */
+$red: #993120;
+$green: #94B26F;
+$light_green: #B6D491;
+$yellow: #F2DC87;
+$dark_brown: #332318;
+$light_brown: #4C2516;
+$white: #FFFFFF;
+
+/* public colors */
+$p_dark_green: #036e02;
+$p_green:      #096;
+$p_light_green:#088756;
+$p_dark_green_shadow: #545f53;
+$p_light_yellow: #d3d3c3;
+$p_light_grey: #dfdfdf;
+$p_tag_green: #A3E4D7;
+
+$sans_serif: Verdana,Lucida,Arial,Helvetica,sans-serif;
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font: 14px $sans_serif;
+  color: $white;
+  background-color: $p_light_green;
+  background-image: url('/images/mystical.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4em;
+  padding-top: 1em;
+  text-align: center;
+  background: $p_dark_green;
+  color: $green;
+
+  h1 { margin: 0; padding: 0; }
+
+  a {
+    color: $light_green;
+    text-decoration: none;
+    padding: 10px 0;
+  }
+
+  a .blog{
+    text-decoration: none;
+  }
+
+  .header-left-side{
+    flex: 0 0 20%;
+  }
+  .header-center{
+    flex: 1 1 60%;
+    h1 { margin: 0; padding: 0; }
+  }
+  .header-right-side{
+    flex: 0 0 20%;
+    justify-content: end;
+    float: right;
+  }
+}
+
+.private-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  height: 3em;
+  border-radius: 25px;
+  box-shadow: 2px 4px 8px $p_dark_green_shadow;
+  text-align: center;
+  background: $p_dark_green;
+  color: $green;
+
+  h2 { 
+    margin: 0; 
+    padding: 0;
+    color: $light_green;
+  }
+  a {
+    color: $light_green;
+    text-decoration: none;
+    padding: 10px 0;
+  }
+  .header-left-side{
+    flex: 0 0 25%;
+  }
+  .header-center{
+    flex: 1 1 50%;
+    h1 { margin: 0; padding: 0; }
+  }
+  .header-right-side{
+    flex: 0 0 25%;
+    justify-content: end;
+    float: right;
+  }
+}
+
+.notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // margin: 4px auto;
+  height: 1.25em;
+  padding: 0.5em;
+  text-align: center;
+  background: #B6D491;
+  color: #7f7f7f;
+  border-radius: 4px;
+  box-shadow: 2px 4px 8px $p_dark_green_shadow;
+}
+
+.tag{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  border-radius: 7px;
+  background-image: linear-gradient($p_green, $p_tag_green, $p_dark_green);
+  color: #3f3f3f;
+  padding: 6px 12px;
+  box-shadow: 2px 4px 8px $p_dark_green_shadow;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  .nav {
+    padding: 10px;
+    background-image: linear-gradient($p_dark_green, $p_light_green);
+    text-align: center;
+    color: $light_green;
+    a {
+      color: $light_green;
+      text-decoration: none;
+      padding: 10px 0;
+    }
+  }
+  .public{
+    flex: 0 1 180px;
+  }
+  .private{
+    flex: 0 1 100px;
+  }
+}
+
+.link{
+  padding: 10px 0;
+}
+
+.content {
+  flex: 0 1 500px;
+  padding: 20px 20px;
+  background: $p_light_green;
+  color: $p_light_yellow;
+  overflow-y: auto
+}
+.login{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.private-subjects{
+  display: flex;
+  flex-direction: column;
+}
+
+.private-subject-item{
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background: $p_green;
+  box-shadow: 2px 4px 8px $p_dark_green_shadow;
+}
+.private-subject-item-title-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 20px;
+}
+.item-position{
+  flex: 0 1 10%;
+}
+.item-title{
+  flex: 0 1 90%;
+}
+.private-subject-item-row-column-checkboxes{
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 30%;
+}
+.private-subject-item-row-column-rightside{
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 70%;
+}
+.item-checkbox-row{
+  display: flex;
+  flex-direction: row;
+}
+.item-label{
+  flex: 0 1 60%;
+  padding: 0 4px;
+}
+.item-checkbox{
+  flex: 0 1 40%;
+  padding: 0 4px;
+}
+.item-published{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.private-notes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: $p_light_grey;
+  color: #7f7f7f;
+}
+.private-button-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.private-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  border-radius: 25px;
+  background-image: linear-gradient($p_green, $p_dark_green);
+  // background-color: $p_light_green;
+  color: $yellow;
+  padding: 6px 12px;
+  box-shadow: 2px 4px 8px $p_dark_green_shadow;
+}
+
+.editing{
+  text-align: center;
+}
+.danger{
+  color: red;
+  text-align: center;
+  font-weight: 600;
+}
+.private-delete-button-row{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 10px 20px;
+}
+.button-danger{
+  margin: 10px auto;
+  border-radius: 25px;
+  border-style: none;
+  background-image: linear-gradient($p_green, $p_dark_green);
+  font-size: 18px;
+  font-weight: 600;
+  color: red;
+  padding: 6px 12px;
+  box-shadow: 2px 4px 8px $p_dark_green_shadow;
+}
+.button-create{
+  margin: 10px auto;
+  border-radius: 25px;
+  border-style: none;
+  background-image: linear-gradient($p_green, $p_dark_green);
+  font-size: 18px;
+  font-weight: 600;
+  color: $yellow;
+  padding: 6px 12px;
+  box-shadow: 2px 4px 8px $p_dark_green_shadow;
+}
+
+.public-sections{
+  padding: 8px 8px 20px;
+  background-color: $p_light_grey;
+  color: #7f7f7f;
+  p {
+    margin: 0;
+  }
+}
+
+.footer {
+  clear: both;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2.5em;
+  text-align: right;
+  /* background: $light_brown image-url("footer_gradient.png") repeat-y 0 0; */
+  background-image: linear-gradient($p_light_green, $p_dark_green);
+  color: $yellow;
+
+  p {
+    margin: 0;
+    padding: 0.5em 1em;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $p_light_yellow;
+}
